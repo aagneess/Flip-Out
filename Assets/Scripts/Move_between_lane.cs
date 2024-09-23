@@ -19,6 +19,7 @@ public class Move_between_lane : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
         //speed of player 
         rb2D.velocity = new Vector2(Speed, rb2D.velocity.y);
 
@@ -29,12 +30,14 @@ public class Move_between_lane : MonoBehaviour
         {
             yAxis -= 1;
             yAxis = Mathf.Clamp(yAxis, 0, 1);
+           // Camera.main.transform.position = new Vector3(xAxis, 0, 0);
         }
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             yAxis += 1;
             yAxis = Mathf.Clamp(yAxis, 0, 1);
+          //  Camera.main.transform.position= new Vector3(xAxis, 0, 0);
           
         }
 
