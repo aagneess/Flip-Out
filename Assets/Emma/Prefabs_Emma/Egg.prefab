@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -3374702167574659424}
   m_Layer: 0
   m_Name: Egg
-  m_TagString: Player
+  m_TagString: Egg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,7 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 507f5ac9bc6583e49ba7dac96cc2a4da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwForce: 5
+  throwForce: 10
+  upForce: 1
 --- !u!50 &6210975615666112735
 Rigidbody2D:
   serializedVersion: 4
@@ -115,7 +116,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.2
+  m_GravityScale: 0.8
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2

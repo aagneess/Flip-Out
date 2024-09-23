@@ -4,19 +4,21 @@ public class Egg : MonoBehaviour
 {
     public float throwForce = 1f;
 
-    //public int Damage = 1;
+    public float upForce = 1f;
 
     void Update()
     {
-
         transform.position += transform.right * Time.deltaTime * throwForce;
-
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Hit: " + collision.tag);
+        if (other.tag == "Enemy")
+        {          
+            Destroy(this.gameObject, 2);
 
-        Destroy(this.gameObject);
+        }
+
+
     }
 }
