@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -475,9 +474,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _egg: {fileID: 7169479776675929272, guid: ab4d3c9659faad44eb67a4a00f1f040d, type: 3}
-  ThrowPoint: {fileID: 1467405671}
+  ThrowPointStart: {fileID: 1467405671}
   ThrowRate: 1
-  throwIntervall: 0.8
+  throwJourney: 1
 --- !u!50 &1291160779
 Rigidbody2D:
   serializedVersion: 4
@@ -703,7 +702,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1467405671}
   m_Layer: 0
-  m_Name: ThrowPoint
+  m_Name: ThrowPointStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -718,7 +717,7 @@ Transform:
   m_GameObject: {fileID: 1467405670}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.81, y: 0.21, z: 0}
+  m_LocalPosition: {x: 0.69, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

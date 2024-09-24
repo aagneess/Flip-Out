@@ -17,6 +17,8 @@ public class Egg : MonoBehaviour
         {          
             Destroy(this.gameObject, 2);
 
+            Debug.Log("Hit: " +  other.tag);
+
         }
 
 
