@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,7 @@ using UnityEngine;
 public class Movement_Player : MonoBehaviour
 {
     public float Speed = 1f;
+    public float acceleration = 1f;
     private Rigidbody2D rb2D;
 
     //Change to private after testing is done
@@ -18,6 +20,16 @@ public class Movement_Player : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        LaneMovement();
+
+        //göra så det går snabbare och snabbare ju mer tiden går. 
+        Speed += acceleration * Time.deltaTime;
+        Debug.Log("speed:" + Speed);
+
+    }
+
+    public void LaneMovement()
     {
 
         //speed of player 
