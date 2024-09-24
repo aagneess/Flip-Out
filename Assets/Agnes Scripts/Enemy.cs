@@ -41,4 +41,6 @@ public class Enemy : MonoBehaviour
             Debug.Log("BoxCollider2D removed");
         }
     }
+
+
 }

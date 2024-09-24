@@ -7,7 +7,9 @@ public class Eggthrow : MonoBehaviour
 
     [SerializeField] private float ThrowRate = 0.5f;
 
-    [SerializeField] private float throwJourney = 1f;
+    [SerializeField] private float startThrowing = 0.5f;
+
+    
 
     void Update()
     {
@@ -17,7 +19,7 @@ public class Eggthrow : MonoBehaviour
     private void Trowing()
     {
 
-        if (Input.GetKeyDown(KeyCode.Space) && Time.time > throwJourney)
+        if (Input.GetKeyDown(KeyCode.Space) && Time.time > startThrowing)
         {
             ThrowRate = Time.time + ThrowRate;
             
