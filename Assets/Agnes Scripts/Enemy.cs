@@ -10,11 +10,13 @@ public class Enemy : MonoBehaviour
     
     private SpriteRenderer spriteRenderer;
     private BoxCollider2D boxCollider;
+    private Rigidbody2D rb2D;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         boxCollider = GetComponent<BoxCollider2D>();
+        rb2D = GetComponent<Rigidbody2D>();
     }
 
     public void Damage(int dmg) 
@@ -25,6 +27,7 @@ public class Enemy : MonoBehaviour
         {
             FlipEnemy();
             RemoveBoxCollider();
+            RemoveRigidBody();
         }
     }
 
@@ -41,4 +44,14 @@ public class Enemy : MonoBehaviour
             Debug.Log("BoxCollider2D removed");
         }
     }
+    public void RemoveRigidBody()
+    {
+        if (rb2D != null)
+        {
+            Destroy(rb2D);
+            Debug.Log("rb2D removed");
+        }
+    }
+
+
 }

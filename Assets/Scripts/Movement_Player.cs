@@ -23,6 +23,7 @@ public class Movement_Player : MonoBehaviour
     void Update()
     {
         Movement();
+
     }
 
     public void Movement()
@@ -42,19 +43,28 @@ public class Movement_Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             yAxis -= 1;
-            yAxis = Mathf.Clamp(yAxis, 0, 1);
+            yAxis = Mathf.Clamp(yAxis, -2, -1);
             // Camera.main.transform.position = new Vector3(xAxis, 0, 0);
         }
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             yAxis += 1;
-            yAxis = Mathf.Clamp(yAxis, 0, 1);
+            yAxis = Mathf.Clamp(yAxis, -2, -1);
             //  Camera.main.transform.position= new Vector3(xAxis, 0, 0);
 
         }
 
         //update movement
         transform.position = new Vector2(xAxis, yAxis);
+
+    }
+
+    private void OnCollisionEnter2D(Collision2D Collision)
+    {
+        if (Collision.gameObject.CompareTag("Home"))
+        {
+            Debug.Log("You are home. Congratz");
+        }
     }
 }
