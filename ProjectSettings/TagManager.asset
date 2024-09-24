@@ -4,6 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Enemy
+  - Ground
+  - Bullet
   - Egg
   layers:
   - Default
@@ -13,8 +16,8 @@ TagManager:
   - Water
   - UI
   - road etc
-  - 
-  - 
+  - Bullet
+  - Enemy
   - 
   - 
   - 
