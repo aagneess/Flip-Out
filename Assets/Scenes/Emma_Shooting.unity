@@ -403,6 +403,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealth: 2
   bulletTag: Egg
+  rb2D: {fileID: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!114 &726075820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -541,8 +543,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _egg: {fileID: 7169479776675929272, guid: ab4d3c9659faad44eb67a4a00f1f040d, type: 3}
   ThrowPointStart: {fileID: 1467405671}
-  ThrowRate: 1
-  startThrowing: 0.2
+  throwRate: 0.5
+  nextThrow: 0.5
 --- !u!50 &1291160779
 Rigidbody2D:
   serializedVersion: 4
@@ -643,7 +645,7 @@ GameObject:
   - component: {fileID: 1399025134}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Ground
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

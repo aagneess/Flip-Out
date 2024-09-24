@@ -3,16 +3,17 @@ using UnityEngine;
 public class Egg : MonoBehaviour
 {
     private Rigidbody2D eggRigidbody;
+    
+    private int damage = 1;
 
     [SerializeField] private Transform ThrowStart;
 
     [SerializeField] private float eggForce = 0.3f;
 
-    [SerializeField] private Vector3 throwDirection = new Vector3(1f, 1f, 0f);  // Direction of the throw
+    [SerializeField] private Vector3 throwDirection = new Vector3(0.5f, 0.5f, 0f);  // Direction of the throw
 
     private void Start()
     {
-
 
         eggRigidbody = GetComponent<Rigidbody2D>();
         if (eggRigidbody != null)
@@ -24,28 +25,34 @@ public class Egg : MonoBehaviour
 
         }
 
-        else
-        {
-            Debug.Log("Rigidbody not found...");
-        }
+
 
     }
     void Update()
     {
 
-        //transform.position += transform.right * Time.deltaTime * eggForce;
+    }
 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Enemy")
+        {
+            collision.collider.gameObject.GetComponent<Enemy>().Damage(damage);
+            
+            Destroy(this.gameObject, 0.1f);
+
+        }
 
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    /*private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Enemy")
         {          
-            Destroy(this.gameObject, 2);
+            Destroy(this.gameObject);
 
             Debug.Log("Hit: " +  other.tag);
 
         }
-    }
+    }*/
 }
