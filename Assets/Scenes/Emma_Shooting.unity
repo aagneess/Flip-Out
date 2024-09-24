@@ -242,7 +242,6 @@ GameObject:
   - component: {fileID: 726075815}
   - component: {fileID: 726075821}
   - component: {fileID: 726075820}
-  - component: {fileID: 726075819}
   m_Layer: 0
   m_Name: OldLady
   m_TagString: Enemy
@@ -389,22 +388,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &726075819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 726075814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df434b80d2e864957a6b467a8c32f511, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyHealth: 2
-  bulletTag: Egg
-  rb2D: {fileID: 0}
-  spriteRenderer: {fileID: 0}
 --- !u!114 &726075820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -545,6 +528,7 @@ MonoBehaviour:
   ThrowPointStart: {fileID: 1467405671}
   throwRate: 0.5
   nextThrow: 0.5
+  eggCount: 5
 --- !u!50 &1291160779
 Rigidbody2D:
   serializedVersion: 4
