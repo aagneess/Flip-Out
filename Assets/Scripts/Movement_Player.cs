@@ -7,6 +7,7 @@ public class Movement_Player : MonoBehaviour
 {
     public float Speed = 1f;
     public float acceleration = 1f;
+    public float Maxspeed;
     private Rigidbody2D rb2D;
 
     //Change to private after testing is done
@@ -21,18 +22,18 @@ public class Movement_Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        LaneMovement();
-
-        //göra så det går snabbare och snabbare ju mer tiden går. 
-        Speed += acceleration * Time.deltaTime;
-        Debug.Log("speed:" + Speed);
-
+        Movement();
     }
 
-    public void LaneMovement()
+    public void Movement()
     {
+        //speed and acceleration
+        Speed = Mathf.Clamp(Speed, 0, Maxspeed);
+        //göra så det går snabbare och snabbare ju mer tiden går. 
+        Speed += acceleration * Time.deltaTime;
 
-        //speed of player 
+
+        // Lane code 
         rb2D.velocity = new Vector2(Speed, rb2D.velocity.y);
 
         float xAxis = transform.position.x; // x axis
