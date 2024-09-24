@@ -8,17 +8,18 @@ TagManager:
   - Ground
   - Bullet
   - Egg
+  - Home
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - player
+  - Player
   - Water
   - UI
   - road etc
   - Bullet
   - Enemy
-  - 
+  - Egg
   - 
   - 
   - 

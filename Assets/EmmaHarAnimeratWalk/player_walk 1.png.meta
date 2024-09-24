@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d845bb046dc7df04cb8b2d2efb39cac9
+guid: df425605e93dcb047ae20e60dbf15306
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -93,17 +93,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: throw_animation_0
+      name: player_walk 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 48
-        height: 48
+        width: 24
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +124,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be153de84f53de148835afb80cf8922f
-      internalID: 1224163243
+      spriteID: 0e5f0caa57a32a94486fea8de49a99f9
+      internalID: 643973599
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: throw_animation_1
+      name: player_walk 1_1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd54b6e45dbde4445ac5a327a7a3af36
+      internalID: 358509562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_walk 1_2
       rect:
         serializedVersion: 2
         x: 48
         y: 0
-        width: 48
-        height: 48
+        width: 24
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8bb5f80355349248a27a4df93c06344
-      internalID: 1923243371
+      spriteID: 28e87528399457e49b9b739513c73ee7
+      internalID: -183647251
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: throw_animation_2
+      name: player_walk 1_3
       rect:
         serializedVersion: 2
-        x: 96
+        x: 72
         y: 0
-        width: 48
-        height: 48
+        width: 24
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,50 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f41ab0627e792a148a7af3aed9ef02eb
-      internalID: -535256815
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: throw_animation_3
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4618240f713b291458a4cab234a3760e
-      internalID: -305105927
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: throw_animation_4
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 592de6029fb14634a902d494bfcba935
-      internalID: -923727663
+      spriteID: 03c52ff8c4c91d042aa0776b30cb46a5
+      internalID: -1437924651
       vertices: []
       indices: 
       edges: []
@@ -212,11 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      throw_animation_0: 1224163243
-      throw_animation_1: 1923243371
-      throw_animation_2: -535256815
-      throw_animation_3: -305105927
-      throw_animation_4: -923727663
+      player_walk 1_0: 643973599
+      player_walk 1_1: 358509562
+      player_walk 1_2: -183647251
+      player_walk 1_3: -1437924651
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

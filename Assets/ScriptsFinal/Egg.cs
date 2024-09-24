@@ -38,11 +38,17 @@ public class Egg : MonoBehaviour
         if (collision.collider.tag == "Enemy")
         {
             collision.collider.gameObject.GetComponent<Enemy>().Damage(damage);
-            
-            Destroy(this.gameObject, 0.1f);
 
+            Destroy(gameObject, 0.1f);
         }
 
+        else
+        {
+            Destroy(gameObject, 0.1f);
+            Debug.Log(collision.gameObject.name);
+        }
+        
+        
     }
 
     /*private void OnTriggerEnter2D(Collider2D other)
