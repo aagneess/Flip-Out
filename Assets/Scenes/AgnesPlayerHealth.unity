@@ -406,7 +406,7 @@ GameObject:
   m_Component:
   - component: {fileID: 732071661}
   m_Layer: 0
-  m_Name: TrowPoint
+  m_Name: ThrowPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -441,7 +441,6 @@ GameObject:
   - component: {fileID: 900630130}
   - component: {fileID: 900630128}
   - component: {fileID: 900630132}
-  - component: {fileID: 900630133}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -458,7 +457,7 @@ Transform:
   m_GameObject: {fileID: 900630126}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.113, y: -3.488, z: 10}
+  m_LocalPosition: {x: -2.43, y: -3.488, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -477,7 +476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a66a8f5017a74e0584ed87813458095, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 0
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   collisionColor: {r: 0.9098039, g: 0.4392157, b: 0.39607844, a: 1}
   enemyTag: Enemy
@@ -564,7 +563,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &900630131
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -622,25 +621,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c98f563779d5294fb77e98014014b37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _egg: {fileID: 7169479776675929272, guid: c148915e3f721410b99d194d049431e1, type: 3}
-  ThrowPointStart: {fileID: 0}
-  ThrowPointEnd: {fileID: 0}
-  startTime: 0
+  _egg: {fileID: 8560671450786192819, guid: 7d2c1aa3c13fb495c9d53139221556e1, type: 3}
+  ThrowPointStart: {fileID: 732071661}
   ThrowRate: 1
-  throwJourney: 1
---- !u!114 &900630133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 900630126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8a904c92357d44d5b4eda7828a4289f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 8560671450786192819, guid: 7d2c1aa3c13fb495c9d53139221556e1, type: 3}
+  startThrowing: 0.5
 --- !u!1 &1309037407
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,6 +843,7 @@ GameObject:
   - component: {fileID: 1709733272}
   - component: {fileID: 1709733273}
   - component: {fileID: 1709733274}
+  - component: {fileID: 1709733275}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Enemy
@@ -990,8 +975,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2ffd748198064482825ad32e2a7df22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
   flippedSprite: {fileID: 21300000, guid: e9d9b75701c9e0241a9cda2a2ef2e8d0, type: 3}
+  health: 2
 --- !u!50 &1709733274
 Rigidbody2D:
   serializedVersion: 4
@@ -1000,7 +985,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1709733268}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1018,7 +1003,21 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 5
+--- !u!114 &1709733275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709733268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df434b80d2e864957a6b467a8c32f511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: 2
+  bulletTag: Bullet
 --- !u!1 &1716756484
 GameObject:
   m_ObjectHideFlags: 0
