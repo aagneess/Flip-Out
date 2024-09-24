@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Bullet
   - Egg
+  - Home
   layers:
   - Default
   - TransparentFX
