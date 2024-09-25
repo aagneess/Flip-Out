@@ -9,6 +9,8 @@ public class Movement_Player : MonoBehaviour
     public float acceleration = 1f;
     public float Maxspeed;
     private Rigidbody2D rb2D;
+    private float Startpos;
+   
 
     //Change to private after testing is done
     //private float speed = 1f; (test what speed is best)
@@ -16,6 +18,7 @@ public class Movement_Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Startpos = transform.position.y;
         rb2D = GetComponent<Rigidbody2D>();
     }
 
@@ -28,6 +31,7 @@ public class Movement_Player : MonoBehaviour
 
     public void Movement()
     {
+        
         //speed and acceleration
         Speed = Mathf.Clamp(Speed, 0, Maxspeed);
         //göra så det går snabbare och snabbare ju mer tiden går. 
@@ -40,19 +44,19 @@ public class Movement_Player : MonoBehaviour
         float xAxis = transform.position.x; // x axis
         float yAxis = transform.position.y; //y axis
 
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            yAxis -= 1;
-            yAxis = Mathf.Clamp(yAxis, -2, -1);
-            // Camera.main.transform.position = new Vector3(xAxis, 0, 0);
-        }
-
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             yAxis += 1;
-            yAxis = Mathf.Clamp(yAxis, -2, -1);
+            yAxis = Mathf.Clamp(yAxis, Startpos, Startpos + 1);
             //  Camera.main.transform.position= new Vector3(xAxis, 0, 0);
 
+        }
+
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            yAxis -= 1;
+            yAxis = Mathf.Clamp(yAxis, Startpos, Startpos + 1);
+            // Camera.main.transform.position = new Vector3(xAxis, 0, 0);
         }
 
         //update movement
