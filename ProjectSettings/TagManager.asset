@@ -13,15 +13,15 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Player
+  - player
   - Water
   - UI
   - road etc
   - Bullet
   - Enemy
   - Egg
-  - 
-  - 
+  - "Tr\xE4dN\xE4ra"
+  - Lyktstolpar
   - 
   - 
   - 
@@ -45,4 +45,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: "Tr\xE4d"
+    uniqueID: 3475151593
+    locked: 0
+  - name: Lyktstolpar
+    uniqueID: 2522218353
     locked: 0
