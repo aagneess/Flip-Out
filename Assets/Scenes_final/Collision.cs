@@ -10,6 +10,7 @@ public class Collision : MonoBehaviour
     public string enemyTag = "Enemy";
     public string obstacleTag = "Obstacle";
     public Image flipOutBar;
+    public Animator animator;
     
     public float healthAmount = 100f;
     public float maxHealth = 100f;
@@ -30,21 +31,25 @@ public class Collision : MonoBehaviour
     }
 		
     void Update ()
-    {
-		//rb2D.velocity = new Vector2 (speed, 0);
-                
+    {          
         if (spriteRenderer)
         {
             spriteRenderer.color = Color.Lerp(normalColor, collisionColor, flipOutBar.fillAmount);
         }
 	}
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-    // Only proceed if we collide with an enemy or an obstacle
         if (collision.gameObject.CompareTag(enemyTag) || collision.gameObject.CompareTag(obstacleTag))
         {
-            // Ensure spriteRenderer exists and damage interval has passed
+            // Add bump-into-something animation
+            //animator.SetFloat("Speed", x);
+        }
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag(enemyTag) || collision.gameObject.CompareTag(obstacleTag))
+        {
             if (spriteRenderer && Time.time - lastDamageTime >= damageInterval)
             {
                 TakeDamage(damage);
@@ -75,9 +80,14 @@ public class Collision : MonoBehaviour
 
             if (flipOutBar.fillAmount >= 1f)
             {
+                animator.SetBool("IsFlippingOut", true);
                 Debug.Log("Player has lost!");
                 // Add game over logic here
             }
         }
     }
+    // public void IsFlippingOut()
+    // {
+    //     animator.SetBool("IsFlippingOut", true);
+    // }
 }

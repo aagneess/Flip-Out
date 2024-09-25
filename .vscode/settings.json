@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Flip-Out.sln"
+    "dotnet.defaultSolution": "Game-jam.sln"
 }

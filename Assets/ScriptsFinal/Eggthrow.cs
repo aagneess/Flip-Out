@@ -13,6 +13,13 @@ public class Eggthrow : MonoBehaviour
 
     [SerializeField] private int eggCount = 12;
 
+    public Animator animator;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     void Update()
     {
         if (eggCount == 0)
@@ -21,7 +28,7 @@ public class Eggthrow : MonoBehaviour
             return;
         }
 
-        Trowing();        
+        Throwing();        
     }
 
     private void EggCounter(int eggS)
@@ -29,7 +36,7 @@ public class Eggthrow : MonoBehaviour
         eggCount += eggS;
     }
 
-    private void Trowing()
+    private void Throwing()
     {
 
         if (Input.GetKeyDown(KeyCode.Space) && Time.time > nextThrow)
@@ -46,7 +53,20 @@ public class Eggthrow : MonoBehaviour
 
             Debug.Log(eggCount);
 
+            IsThrowing();
         }
+        
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            animator.SetBool("IsThrowing", false);
+        }
+
+    }
+
+    public void IsThrowing()
+    {
+        animator.SetBool("IsThrowing", true);
+
 
     }
 }
