@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnemyCollision : MonoBehaviour
+public class Collision : MonoBehaviour
 {
-    public float speed;
-    //Change to private after testing is done
-    //private float speed = 0.5f;
     public Color normalColor = Color.white;
     public Color collisionColor = Color.red;
     public string enemyTag = "Enemy";
+    public string obstacleTag = "Obstacle";
     public Image flipOutBar;
     
     public float healthAmount = 100f;
@@ -28,24 +26,26 @@ public class EnemyCollision : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         flipOutBar.fillAmount = 0;
         spriteRenderer.color = normalColor;
+        Debug.Log(spriteRenderer.name);
     }
 		
     void Update ()
     {
-		rb2D.velocity = new Vector2 (speed, 0);
+		//rb2D.velocity = new Vector2 (speed, 0);
                 
-        if (spriteRenderer != null)
+        if (spriteRenderer)
         {
             spriteRenderer.color = Color.Lerp(normalColor, collisionColor, flipOutBar.fillAmount);
         }
 	}
 
-
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (spriteRenderer != null && collision.gameObject.CompareTag(enemyTag))
+    // Only proceed if we collide with an enemy or an obstacle
+        if (collision.gameObject.CompareTag(enemyTag) || collision.gameObject.CompareTag(obstacleTag))
         {
-            if (Time.time - lastDamageTime >= damageInterval)
+            // Ensure spriteRenderer exists and damage interval has passed
+            if (spriteRenderer && Time.time - lastDamageTime >= damageInterval)
             {
                 TakeDamage(damage);
                 lastDamageTime = Time.time;
@@ -53,11 +53,23 @@ public class EnemyCollision : MonoBehaviour
         }
     }
 
+    // private void OnCollisionStay2D(Collision2D collision)
+    // {
+    //     if (spriteRenderer && collision.gameObject.CompareTag(enemyTag) || spriteRenderer && collision.gameObject.CompareTag(obstacleTag))
+    //     {
+    //         if (Time.time - lastDamageTime >= damageInterval)
+    //         {
+    //             TakeDamage(damage);
+    //             lastDamageTime = Time.time;
+    //         }
+    //     }
+    // }
+
     public void TakeDamage(float damage)
     {
         healthAmount -= damage;
 
-        if (flipOutBar != null)
+        if (flipOutBar)
         {
             flipOutBar.fillAmount = (maxHealth - healthAmount) / maxHealth;
 

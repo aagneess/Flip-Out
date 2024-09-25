@@ -28,6 +28,8 @@ public class Enemy : MonoBehaviour
             FlipEnemy();
             RemoveBoxCollider();
             RemoveRigidBody();
+            rb2D.velocity = Vector2.zero;
+            Debug.Log(transform.position);
         }
     }
 
@@ -52,6 +54,4 @@ public class Enemy : MonoBehaviour
             Debug.Log("rb2D removed");
         }
     }
-
-
 }
