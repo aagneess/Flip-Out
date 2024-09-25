@@ -168,6 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flippedSprite: {fileID: 21300000, guid: 5e2d795606d5bd44eba776bcb27d2f31, type: 3}
   health: 2
+  enemySpeed: 0.1
 --- !u!50 &6092784048969094752
 Rigidbody2D:
   serializedVersion: 4

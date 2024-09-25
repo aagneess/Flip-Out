@@ -98,7 +98,7 @@ Animator:
   m_GameObject: {fileID: 8389308119511165013}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 93cb32b14ef771241a7a02f1eb793cee, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9c7b4ca56dc024d40bcba59e7c9bc060, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -168,6 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flippedSprite: {fileID: 21300000, guid: e9d9b75701c9e0241a9cda2a2ef2e8d0, type: 3}
   health: 2
+  enemySpeed: 0.3
 --- !u!50 &7929185112241586356
 Rigidbody2D:
   serializedVersion: 4
