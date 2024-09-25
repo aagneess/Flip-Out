@@ -2,20 +2,26 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Movement_Player : MonoBehaviour
 {
+    //public variables
     public float Speed = 1f;
     public float acceleration = 1f;
     public float Maxspeed;
+
+    //WINPNG
+    //to make the png work have it as a child on the characters house.
+    //put it a but above the house and it will appear when you get to the house.
+    private string winpngName = "you_win_!";
+    private GameObject winpng;
+
+    //private variables
     private Rigidbody2D rb2D;
     private float lanePosition;
     private float limitPosition;
 
-
-
-    //Change to private after testing is done
-    //private float speed = 1f; (test what speed is best)
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +29,15 @@ public class Movement_Player : MonoBehaviour
         limitPosition = transform.position.y;
         lanePosition = limitPosition;
         rb2D = GetComponent<Rigidbody2D>();
+
+        //search for winpng
+        winpng = GameObject.Find(winpngName);
+
+        //makes sure winpng is inactive at first
+        if (winpng != null)
+        {
+            winpng.SetActive(false);//hide the png
+        }
     }
 
     // Update is called once per frame
@@ -33,7 +48,7 @@ public class Movement_Player : MonoBehaviour
 
     public void Movement()
     {
-        
+
         //speed and acceleration
         Speed = Mathf.Clamp(Speed, 0, Maxspeed);
         //göra så det går snabbare och snabbare ju mer tiden går. 
@@ -70,7 +85,15 @@ public class Movement_Player : MonoBehaviour
     {
         if (Collision.gameObject.CompareTag("Home"))
         {
-            Debug.Log("You are home. Congratz");
+            ActivateWinpng();
+        }
+    }
+
+    private void ActivateWinpng()
+    {
+        if (winpng != null)
+        {
+            winpng.SetActive(true); // Show the PNG object
         }
     }
 }
