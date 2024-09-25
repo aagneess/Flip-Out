@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
 
     public Sprite flippedSprite;
     public int health;
+    public float enemySpeed;
     
     private SpriteRenderer spriteRenderer;
     private BoxCollider2D boxCollider;
@@ -20,6 +21,10 @@ public class Enemy : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
+    private void Update()
+    {
+        transform.Translate(Vector3.right * enemySpeed * Time.deltaTime);
+    }
 
     public void Damage(int dmg)
     {
@@ -31,6 +36,8 @@ public class Enemy : MonoBehaviour
             RemoveBoxCollider();
             RemoveRigidBody();
             RemoveAnimator();
+
+            enemySpeed = 0;
             //rb2D.velocity = Vector2.zero;
             //Debug.Log(transform.position);
         }
