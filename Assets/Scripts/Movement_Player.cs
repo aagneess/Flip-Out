@@ -9,8 +9,10 @@ public class Movement_Player : MonoBehaviour
     public float acceleration = 1f;
     public float Maxspeed;
     private Rigidbody2D rb2D;
-    private float Startpos;
-   
+    private float lanePosition;
+    private float limitPosition;
+
+
 
     //Change to private after testing is done
     //private float speed = 1f; (test what speed is best)
@@ -18,7 +20,8 @@ public class Movement_Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Startpos = transform.position.y;
+        limitPosition = transform.position.y;
+        lanePosition = limitPosition;
         rb2D = GetComponent<Rigidbody2D>();
     }
 
@@ -26,7 +29,6 @@ public class Movement_Player : MonoBehaviour
     void Update()
     {
         Movement();
-
     }
 
     public void Movement()
@@ -42,25 +44,25 @@ public class Movement_Player : MonoBehaviour
         rb2D.velocity = new Vector2(Speed, rb2D.velocity.y);
 
         float xAxis = transform.position.x; // x axis
-        float yAxis = transform.position.y; //y axis
+        //startpos of player y AXIS
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            yAxis += 1;
-            yAxis = Mathf.Clamp(yAxis, Startpos, Startpos + 1);
+            lanePosition += 1;
+            lanePosition = Mathf.Clamp(lanePosition, limitPosition - 1, limitPosition);
             //  Camera.main.transform.position= new Vector3(xAxis, 0, 0);
 
         }
 
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            yAxis -= 1;
-            yAxis = Mathf.Clamp(yAxis, Startpos, Startpos + 1);
+            lanePosition -= 1;
+            lanePosition = Mathf.Clamp(lanePosition, limitPosition - 1, limitPosition);
             // Camera.main.transform.position = new Vector3(xAxis, 0, 0);
         }
 
         //update movement
-        transform.position = new Vector2(xAxis, yAxis);
+        transform.position = new Vector2(xAxis, lanePosition);
 
     }
 
