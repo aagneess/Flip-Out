@@ -6,7 +6,8 @@ using UnityEngine;
 public class Camera_Movement : MonoBehaviour
 {
     public Transform Player;
-    public float xlimit; 
+    private float xlimit;
+    public float camerasmooth = 0.001f;
 
     //x limit för spelaran vad är positionen på kameran när den början 
     //lägg den på efter camera.x 
@@ -25,6 +26,6 @@ public class Camera_Movement : MonoBehaviour
 
         Cameraposition.x = Mathf.Max(Cameraposition.x, -xlimit); //takes  the largest value
 
-        transform.position = Cameraposition;
+        transform.position = Vector3.Lerp (transform.position, Cameraposition, camerasmooth);
     }
 }

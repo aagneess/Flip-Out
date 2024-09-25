@@ -7061,7 +7061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 439077295}
-  xlimit: 0
+  camerasmooth: 0.008
 --- !u!1001 &3883145207379095023
 PrefabInstance:
   m_ObjectHideFlags: 0
