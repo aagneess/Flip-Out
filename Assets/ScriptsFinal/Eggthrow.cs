@@ -3,13 +3,14 @@ using UnityEngine;
 public class Eggthrow : MonoBehaviour
 {
     [SerializeField] private GameObject _egg;
+    
     [SerializeField] private Transform ThrowPointStart;
 
     [SerializeField] private float throwRate;
 
     [SerializeField] private float nextThrow;
 
-    [SerializeField] private int eggCount = 5;
+    [SerializeField] private int eggCount = 12;
 
     void Update()
     {
@@ -19,8 +20,7 @@ public class Eggthrow : MonoBehaviour
             return;
         }
 
-        Trowing();
-        
+        Trowing();        
     }
 
     private void EggCounter(int eggS)
