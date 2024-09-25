@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Eggthrow : MonoBehaviour
 {
+
     [SerializeField] private GameObject _egg;
     
     [SerializeField] private Transform ThrowPointStart;
@@ -34,13 +35,18 @@ public class Eggthrow : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && Time.time > nextThrow)
         {
             EggCounter(-1);
+            
+            
 
             nextThrow = Time.time + throwRate;
             
             GameObject _throwInstance  = Instantiate(_egg, ThrowPointStart.position, Quaternion.identity);
 
+
+
             Debug.Log(eggCount);
 
         }
+
     }
 }
