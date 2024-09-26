@@ -10,6 +10,7 @@ public class Movement_Player : MonoBehaviour
     public float Speed = 1f;
     public float acceleration = 1f;
     public float Maxspeed;
+    public Animator animator;
 
     //WINPNG
     //to make the png work have it as a child on the characters house.
@@ -22,14 +23,14 @@ public class Movement_Player : MonoBehaviour
     private float lanePosition;
     private float limitPosition;
 
-
     // Start is called before the first frame update
     void Start()
     {
         limitPosition = transform.position.y;
         lanePosition = limitPosition;
         rb2D = GetComponent<Rigidbody2D>();
-
+        animator = GetComponent<Animator>();
+    
         //search for winpng
         winpng = GameObject.Find(winpngName);
 
@@ -51,7 +52,7 @@ public class Movement_Player : MonoBehaviour
 
         //speed and acceleration
         Speed = Mathf.Clamp(Speed, 0, Maxspeed);
-        //göra så det går snabbare och snabbare ju mer tiden går. 
+        //gï¿½ra sï¿½ det gï¿½r snabbare och snabbare ju mer tiden gï¿½r. 
         Speed += acceleration * Time.deltaTime;
 
 
@@ -86,6 +87,7 @@ public class Movement_Player : MonoBehaviour
         if (Collision.gameObject.CompareTag("Home"))
         {
             ActivateWinpng();
+            IsWinning();
         }
     }
 
@@ -95,5 +97,10 @@ public class Movement_Player : MonoBehaviour
         {
             winpng.SetActive(true); // Show the PNG object
         }
+    }
+
+        public void IsWinning()
+    {
+        animator.SetBool("IsWinning", true);
     }
 }

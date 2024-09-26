@@ -66,7 +66,5 @@ public class Eggthrow : MonoBehaviour
     public void IsThrowing()
     {
         animator.SetBool("IsThrowing", true);
-
-
     }
 }

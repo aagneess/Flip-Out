@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 1601366782747692168}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.307827, y: -3.3, z: 0}
+  m_LocalPosition: {x: -8, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -201,6 +201,7 @@ MonoBehaviour:
   throwRate: 0.5
   nextThrow: 0.5
   eggCount: 24
+  animator: {fileID: 0}
 --- !u!114 &4725199046142309156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,6 +234,7 @@ MonoBehaviour:
   enemyTag: Enemy
   obstacleTag: Obstacle
   flipOutBar: {fileID: 0}
+  animator: {fileID: 0}
   healthAmount: 100
   maxHealth: 100
   damage: 0.5
