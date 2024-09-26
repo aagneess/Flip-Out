@@ -25,6 +25,7 @@ public class Eggthrow : MonoBehaviour
         if (eggCount == 0)
         {
             Debug.Log("Out of eggs");
+            animator.SetBool("IsThrowing", false);
             return;
         }
 

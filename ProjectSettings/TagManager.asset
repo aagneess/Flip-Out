@@ -9,7 +9,7 @@ TagManager:
   - Bullet
   - Egg
   - Home
-  - stopCamera
+  - Obstacle
   layers:
   - Default
   - TransparentFX

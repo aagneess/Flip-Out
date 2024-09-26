@@ -9,7 +9,7 @@ public class Movement_Player : MonoBehaviour
     //public variables
     public float Speed = 1f;
     public float acceleration = 1f;
-    public float Maxspeed;
+    public float maxSpeed;
     public Animator animator;
 
     //WINPNG
@@ -17,6 +17,8 @@ public class Movement_Player : MonoBehaviour
     //put it a but above the house and it will appear when you get to the house.
     private string winpngName = "you_win_!";
     private GameObject winpng;
+
+    //private Vector3 targetScale = new Vector3(2f, 2f, 0); // twice the size of the original spritesize
 
     //private variables
     private Rigidbody2D rb2D;
@@ -51,7 +53,7 @@ public class Movement_Player : MonoBehaviour
     {
 
         //speed and acceleration
-        Speed = Mathf.Clamp(Speed, 0, Maxspeed);
+        Speed = Mathf.Clamp(Speed, 0, maxSpeed);
         //g�ra s� det g�r snabbare och snabbare ju mer tiden g�r. 
         Speed += acceleration * Time.deltaTime;
 
@@ -102,5 +104,7 @@ public class Movement_Player : MonoBehaviour
         public void IsWinning()
     {
         animator.SetBool("IsWinning", true);
+        //transform.localScale = targetScale;
     }
 }
+
