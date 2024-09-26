@@ -1,7 +1,6 @@
-using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 public class Eggthrow : MonoBehaviour
 {
@@ -16,18 +15,18 @@ public class Eggthrow : MonoBehaviour
 
     [SerializeField] private int eggCount = 6;
 
+    
+    [SerializeField] private TMP_Text EggCountText;
+
     public Animator animator;
 
     public static Eggthrow instance;
     public Canvas EggCountCanvas;
-    [SerializeField] private TMP_Text EggCountText;
 
     private void Start()
     {
-
         instance = this;
         EggCountText.text = eggCount.ToString();
-
 
         animator = GetComponent<Animator>();
     }
@@ -65,6 +64,11 @@ public class Eggthrow : MonoBehaviour
             Debug.Log(eggCount);
 
             IsThrowing();
+
+            AudioSource audio = GetComponent<AudioSource>();
+
+            audio.Play();
+
         }
         
         if (Input.GetKeyUp(KeyCode.Space))
