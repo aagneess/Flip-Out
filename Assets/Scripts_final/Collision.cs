@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class Collision : MonoBehaviour
 {
+ 
+    private Camera_Movement cameraMovementScript;
+
     public Color normalColor = Color.white;
     public Color collisionColor = Color.red;
     public string enemyTag = "Enemy";
@@ -25,6 +28,10 @@ public class Collision : MonoBehaviour
 
     private void Start()
     {
+        
+        cameraMovementScript = Camera.main.GetComponent<Camera_Movement>();// gets the script
+
+
         rb2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         flipOutBar.fillAmount = 0;
@@ -52,12 +59,30 @@ public class Collision : MonoBehaviour
         if (collision.gameObject.CompareTag(enemyTag) || collision.gameObject.CompareTag(obstacleTag))
         {
             IsStumbling();
+
+            // Stop the camera from following the player
+            if (cameraMovementScript != null)
+            {
+                cameraMovementScript.canFollow = false; // Set the canFollow bool to false from the camera script
+                Debug.Log("please work" + cameraMovementScript);
+            }
         }
         else 
         {
             animator.SetBool("IsStumbling", false);
         }
     }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag(enemyTag) || collision.gameObject.CompareTag(obstacleTag))
+        {
+            cameraMovementScript.canFollow = true;//makes camera to follow again from the camera script
+            Debug.Log("ffollow now" + cameraMovementScript);
+        }
+    }
+
+
 
     private void OnCollisionStay2D(Collision2D collision)
     {

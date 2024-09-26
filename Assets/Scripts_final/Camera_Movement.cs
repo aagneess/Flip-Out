@@ -7,7 +7,7 @@ public class Camera_Movement : MonoBehaviour
 {
     public Transform Player;
     private float xlimit;
-    private bool canFollow = true; //check if camera can follow player
+    public bool canFollow = true; //check if camera can follow player
 
     //x limit för spelaran vad är positionen på kameran när den början 
     //lägg den på efter camera.x 
@@ -31,7 +31,8 @@ public class Camera_Movement : MonoBehaviour
             transform.position = Cameraposition;
         }
     }
-    // Detect when the camera enters a trigger
+
+    // Detect when the camera enters the stopCamera tag
     private void OnTriggerEnter2D(Collider2D collider)
     {
         // Check if the camera collided with the empty GameObject (tagged "StopCamera")
