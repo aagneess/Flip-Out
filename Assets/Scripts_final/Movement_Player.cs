@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Movement_Player : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class Movement_Player : MonoBehaviour
     //put it a but above the house and it will appear when you get to the house.
     private string winpngName = "you_win_!";
     private GameObject winpng;
+    private bool isWinPngActive = false; // Track if the PNG has been activated
+    private bool canCheckForInput = false;  // Track when to allow input
 
     //private Vector3 targetScale = new Vector3(2f, 2f, 0); // twice the size of the original spritesize
 
@@ -47,6 +50,12 @@ public class Movement_Player : MonoBehaviour
     void Update()
     {
         Movement();
+
+        // Once input is allowed, check for key presses and go to MAIN MENU
+        if (canCheckForInput && Input.anyKeyDown)
+        {
+            SceneManager.LoadScene("Main Menu"); // Change scene when any key is pressed
+        }
     }
 
     public void Movement()
@@ -93,12 +102,22 @@ public class Movement_Player : MonoBehaviour
         }
     }
 
+
+
     private void ActivateWinpng()
     {
-        if (winpng != null)
+        if (winpng != null && !isWinPngActive)
         {
             winpng.SetActive(true); // Show the PNG object
+            isWinPngActive = true;
+            Invoke("EnableInputCheck", 3f);
+
         }
+    }
+
+    private void EnableInputCheck()
+    {
+        canCheckForInput = true;
     }
 
         public void IsWinning()
