@@ -1,4 +1,7 @@
+using System;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Eggthrow : MonoBehaviour
 {
@@ -11,12 +14,21 @@ public class Eggthrow : MonoBehaviour
 
     [SerializeField] private float nextThrow;
 
-    [SerializeField] private int eggCount = 12;
+    [SerializeField] private int eggCount = 6;
 
     public Animator animator;
 
+    public static Eggthrow instance;
+    public Canvas EggCountCanvas;
+    [SerializeField] private TMP_Text EggCountText;
+
     private void Start()
     {
+
+        instance = this;
+        EggCountText.text = eggCount.ToString();
+
+
         animator = GetComponent<Animator>();
     }
 
@@ -34,23 +46,21 @@ public class Eggthrow : MonoBehaviour
 
     private void EggCounter(int eggS)
     {
-        eggCount += eggS;
+        eggCount += eggS;       
     }
 
-    private void Throwing()
+    void Throwing()
     {
 
         if (Input.GetKeyDown(KeyCode.Space) && Time.time > nextThrow)
         {
             EggCounter(-1);
-            
-            
+
+            updateEggText(eggCount);
 
             nextThrow = Time.time + throwRate;
             
             GameObject _throwInstance  = Instantiate(_egg, ThrowPointStart.position, Quaternion.identity);
-
-
 
             Debug.Log(eggCount);
 
@@ -61,7 +71,11 @@ public class Eggthrow : MonoBehaviour
         {
             animator.SetBool("IsThrowing", false);
         }
+    }
 
+    private void updateEggText(int egg)
+    {
+        EggCountText.text = eggCount.ToString();
     }
 
     public void IsThrowing()

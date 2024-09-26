@@ -1,15 +1,17 @@
 using UnityEngine;
 
+
 public class Egg : MonoBehaviour
 {
-    private Rigidbody2D eggRigidbody;
-    private int damage = 1;
-
     [SerializeField] private Transform ThrowStart;
     [SerializeField] private Vector2 throwDirection = new Vector3(0.5f, 0.5f, 0f);
 
     [SerializeField] private float eggForce;
     [SerializeField] private Rigidbody2D PlayerRb;
+
+    private Rigidbody2D eggRigidbody;
+    private int damage = 1;
+    
     private void Start()
     {
 
