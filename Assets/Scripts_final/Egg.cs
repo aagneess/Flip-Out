@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 public class Egg : MonoBehaviour
 {
     [SerializeField] private Transform ThrowStart;
@@ -26,12 +25,7 @@ public class Egg : MonoBehaviour
 
             Vector3 arcThrowDirection = ThrowStart.forward + ThrowStart.up;
 
-            Debug.Log("Adding force");
-            //eggRigidbody.AddForce(throwDirection.normalized * eggForce, ForceMode2D.Impulse);
-
         }
-        else
-            Debug.Log("No force added");
     }
    
     void OnCollisionEnter2D(Collision2D collision)
@@ -46,7 +40,6 @@ public class Egg : MonoBehaviour
         else
         {
             Destroy(gameObject, 0.1f);
-            Debug.Log(collision.gameObject.name);
         }
                
     }
