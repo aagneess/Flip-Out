@@ -7,7 +7,7 @@ public class Egg : MonoBehaviour
     
 
     [SerializeField] private Transform ThrowStart;
-    [SerializeField] private float eggForce = 0.3f;
+    [SerializeField] private Vector2 eggForce = new();
     [SerializeField] private Vector3 throwDirection = new Vector3(0.5f, 0.5f, 0f);
 
     private void Start()
