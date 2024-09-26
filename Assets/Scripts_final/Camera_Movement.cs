@@ -38,6 +38,7 @@ public class Camera_Movement : MonoBehaviour
         if (collider.gameObject.CompareTag("stopCamera"))
         {
             canFollow = false; // Stop the camera from following the player
+            Debug.Log(canFollow);
         }
 
     }
