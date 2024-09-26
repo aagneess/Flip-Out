@@ -113,12 +113,12 @@ TextureImporter:
       name: player character flipout animation_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 12
         y: 0
-        width: 48
-        height: 48
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -134,12 +134,12 @@ TextureImporter:
       name: player character flipout animation_1
       rect:
         serializedVersion: 2
-        x: 48
+        x: 60
         y: 0
-        width: 48
-        height: 48
+        width: 24
+        height: 23
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,12 +155,12 @@ TextureImporter:
       name: player character flipout animation_2
       rect:
         serializedVersion: 2
-        x: 96
+        x: 108
         y: 0
-        width: 48
-        height: 48
+        width: 24
+        height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -176,12 +176,12 @@ TextureImporter:
       name: player character flipout animation_3
       rect:
         serializedVersion: 2
-        x: 144
+        x: 156
         y: 0
-        width: 48
-        height: 48
+        width: 24
+        height: 23
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -197,12 +197,12 @@ TextureImporter:
       name: player character flipout animation_4
       rect:
         serializedVersion: 2
-        x: 192
+        x: 204
         y: 0
-        width: 48
-        height: 48
+        width: 24
+        height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -218,12 +218,12 @@ TextureImporter:
       name: player character flipout animation_5
       rect:
         serializedVersion: 2
-        x: 240
+        x: 254
         y: 0
-        width: 48
-        height: 48
+        width: 24
+        height: 25
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -239,12 +239,12 @@ TextureImporter:
       name: player character flipout animation_6
       rect:
         serializedVersion: 2
-        x: 288
+        x: 303
         y: 0
-        width: 48
-        height: 48
+        width: 23
+        height: 28
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -260,12 +260,12 @@ TextureImporter:
       name: player character flipout animation_7
       rect:
         serializedVersion: 2
-        x: 336
+        x: 350
         y: 0
-        width: 48
-        height: 48
+        width: 24
+        height: 27
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -281,12 +281,12 @@ TextureImporter:
       name: player character flipout animation_8
       rect:
         serializedVersion: 2
-        x: 384
+        x: 399
         y: 0
-        width: 48
-        height: 48
+        width: 23
+        height: 28
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -302,12 +302,12 @@ TextureImporter:
       name: player character flipout animation_9
       rect:
         serializedVersion: 2
-        x: 432
+        x: 446
         y: 0
-        width: 48
-        height: 48
+        width: 24
+        height: 27
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -323,12 +323,12 @@ TextureImporter:
       name: player character flipout animation_10
       rect:
         serializedVersion: 2
-        x: 480
+        x: 495
         y: 0
-        width: 48
-        height: 48
+        width: 23
+        height: 28
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -344,12 +344,12 @@ TextureImporter:
       name: player character flipout animation_11
       rect:
         serializedVersion: 2
-        x: 528
+        x: 542
         y: 0
-        width: 48
-        height: 48
+        width: 24
+        height: 27
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

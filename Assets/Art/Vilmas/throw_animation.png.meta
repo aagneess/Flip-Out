@@ -100,12 +100,12 @@ TextureImporter:
       name: throw_animation_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 12
         y: 0
-        width: 48
-        height: 48
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -121,12 +121,12 @@ TextureImporter:
       name: throw_animation_1
       rect:
         serializedVersion: 2
-        x: 48
+        x: 59
         y: 0
-        width: 48
-        height: 48
+        width: 22
+        height: 23
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -142,12 +142,12 @@ TextureImporter:
       name: throw_animation_2
       rect:
         serializedVersion: 2
-        x: 96
+        x: 106
         y: 0
-        width: 48
-        height: 48
+        width: 22
+        height: 23
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -163,12 +163,12 @@ TextureImporter:
       name: throw_animation_3
       rect:
         serializedVersion: 2
-        x: 144
+        x: 151
         y: 0
-        width: 48
-        height: 48
+        width: 37
+        height: 28
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -184,12 +184,12 @@ TextureImporter:
       name: throw_animation_4
       rect:
         serializedVersion: 2
-        x: 192
+        x: 200
         y: 0
-        width: 48
-        height: 48
+        width: 31
+        height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
