@@ -216,7 +216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 1
   acceleration: 1
-  maxSpeed: 1
+  maxSpeed: 4
   animator: {fileID: 633487341999936115}
 --- !u!114 &5809774795669478088
 MonoBehaviour:
