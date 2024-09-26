@@ -1456,6 +1456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 400807247}
+  canFollow: 1
 --- !u!114 &281414387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9162,6 +9163,14 @@ PrefabInstance:
       propertyPath: eggCount
       value: 24
       objectReference: {fileID: 0}
+    - target: {fileID: 667864041761539748, guid: 49cb6659d910947499cb1a6f3989d0d4, type: 3}
+      propertyPath: EggCountText
+      value: 
+      objectReference: {fileID: 482108207}
+    - target: {fileID: 667864041761539748, guid: 49cb6659d910947499cb1a6f3989d0d4, type: 3}
+      propertyPath: EggCountCanvas
+      value: 
+      objectReference: {fileID: 680079593}
     - target: {fileID: 667864041761539748, guid: 49cb6659d910947499cb1a6f3989d0d4, type: 3}
       propertyPath: ThrowPointStart
       value: 
