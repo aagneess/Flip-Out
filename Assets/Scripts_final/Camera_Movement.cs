@@ -16,7 +16,6 @@ public class Camera_Movement : MonoBehaviour
     void Start()
     {
         xlimit = transform.position.x;
-        Debug.Log(canFollow);
 
     }
 
@@ -30,6 +29,7 @@ public class Camera_Movement : MonoBehaviour
             Cameraposition.x = Mathf.Max(Cameraposition.x, -xlimit); //takes  the largest value
             transform.position = Cameraposition;
         }
+
     }
     // Detect when the camera enters a trigger
     private void OnTriggerEnter2D(Collider2D collider)
@@ -38,6 +38,7 @@ public class Camera_Movement : MonoBehaviour
         if (collider.gameObject.CompareTag("stopCamera"))
         {
             canFollow = false; // Stop the camera from following the player
+
         }
 
     }
