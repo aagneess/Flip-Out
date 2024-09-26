@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -819815703
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -1515480650, guid: 415e2420fdb2dca4392e699752762359, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -194,5 +194,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flippedSprite: {fileID: 21300000, guid: 939a101e70d8c9144b7ebec35bac3a33, type: 3}
-  health: 2
-  enemySpeed: 0.2
+  health: 1
+  enemySpeed: 0.1

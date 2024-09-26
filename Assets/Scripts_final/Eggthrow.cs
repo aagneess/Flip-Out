@@ -6,21 +6,14 @@ public class Eggthrow : MonoBehaviour
 {
 
     [SerializeField] private GameObject _egg;
-    
     [SerializeField] private Transform ThrowPointStart;
-
+    [SerializeField] private TMP_Text EggCountText;
     [SerializeField] private float throwRate;
-
     [SerializeField] private float nextThrow;
-
     [SerializeField] private int eggCount = 6;
 
-    
-    [SerializeField] private TMP_Text EggCountText;
-
-    public Animator animator;
-
     public static Eggthrow instance;
+    public Animator animator;
     public Canvas EggCountCanvas;
 
     private void Start()
@@ -35,7 +28,6 @@ public class Eggthrow : MonoBehaviour
     {
         if (eggCount == 0)
         {
-            Debug.Log("Out of eggs");
             animator.SetBool("IsThrowing", false);
             return;
         }
@@ -61,13 +53,7 @@ public class Eggthrow : MonoBehaviour
             
             GameObject _throwInstance  = Instantiate(_egg, ThrowPointStart.position, Quaternion.identity);
 
-            Debug.Log(eggCount);
-
             IsThrowing();
-
-            AudioSource audio = GetComponent<AudioSource>();
-
-            audio.Play();
 
         }
         
