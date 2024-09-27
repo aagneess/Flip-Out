@@ -21939,6 +21939,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tant3(Hund)
       objectReference: {fileID: 0}
+    - target: {fileID: 1850836587164050489, guid: f01c13ceb6aa44a4f9667a3aace9f105, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

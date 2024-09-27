@@ -860,7 +860,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 0}
-  mainMenuMusic: {fileID: 8300000, guid: 885c2854916e946b590243bba4643d03, type: 3}
+  mainMenuMusic: {fileID: 8300000, guid: f42b821fbaca840cbb5d258f3653abe9, type: 3}
   gameplayMusic: {fileID: 8300000, guid: ac15e99a7e992466db2762c0186c2d5e, type: 3}
   gameOverMusic: {fileID: 8300000, guid: b515a0da7eb2444b78815d9667ddbbab, type: 3}
 --- !u!4 &1702196985
