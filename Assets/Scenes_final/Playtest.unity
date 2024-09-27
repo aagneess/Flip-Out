@@ -22669,6 +22669,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1335441527392827527, guid: 8279cdc808de5b54787decb2e7815a51, type: 3}
   m_PrefabInstance: {fileID: 5945974011149895639}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &4767738892075544968 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6124976423841634031, guid: 8279cdc808de5b54787decb2e7815a51, type: 3}
+  m_PrefabInstance: {fileID: 5945974011149895639}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5305376578628168543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22825,7 +22830,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1335441527392827527, guid: 8279cdc808de5b54787decb2e7815a51, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -2.147
       objectReference: {fileID: 0}
     - target: {fileID: 1335441527392827527, guid: 8279cdc808de5b54787decb2e7815a51, type: 3}
       propertyPath: m_LocalPosition.z
@@ -22868,6 +22873,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 713068871}
     - target: {fileID: 2822539608397242345, guid: 8279cdc808de5b54787decb2e7815a51, type: 3}
+      propertyPath: normalColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2822539608397242345, guid: 8279cdc808de5b54787decb2e7815a51, type: 3}
+      propertyPath: normalColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2822539608397242345, guid: 8279cdc808de5b54787decb2e7815a51, type: 3}
+      propertyPath: normalColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2822539608397242345, guid: 8279cdc808de5b54787decb2e7815a51, type: 3}
+      propertyPath: normalColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2822539608397242345, guid: 8279cdc808de5b54787decb2e7815a51, type: 3}
       propertyPath: damageInterval
       value: 0.03
       objectReference: {fileID: 0}
@@ -22879,6 +22900,10 @@ PrefabInstance:
       propertyPath: acceleration
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9210492655372649834, guid: 8279cdc808de5b54787decb2e7815a51, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 4767738892075544968}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
