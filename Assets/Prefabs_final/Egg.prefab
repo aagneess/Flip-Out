@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ThrowStart: {fileID: 3260535529527565107}
   throwDirection: {x: 0.5, y: 0.3}
-  eggForce: 6
+  eggForce: 5
   PlayerRb: {fileID: 1353880889279751198, guid: be39d4a6253ff49f9afbc8d83bd82e16, type: 3}
 --- !u!50 &6210975615666112735
 Rigidbody2D:
