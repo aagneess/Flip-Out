@@ -12,6 +12,7 @@ public class Movement_Player : MonoBehaviour
     public float acceleration = 1f;
     public float maxSpeed;
     public Animator animator;
+    //public SpriteRenderer spriteRenderer;
 
     //WINPNG
     //to make the png work have it as a child on the characters house.
@@ -35,6 +36,7 @@ public class Movement_Player : MonoBehaviour
         lanePosition = limitPosition;
         rb2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        //spriteRenderer = GetComponent<SpriteRenderer>();
     
         //search for winpng
         winpng = GameObject.Find(winpngName);
@@ -99,6 +101,10 @@ public class Movement_Player : MonoBehaviour
         {
             ActivateWinpng();
             IsWinning();
+            // if (spriteRenderer)
+            // {
+            //     spriteRenderer.color = Color.white;
+            // }
         }
     }
 
@@ -120,7 +126,7 @@ public class Movement_Player : MonoBehaviour
         canCheckForInput = true;
     }
 
-        public void IsWinning()
+    public void IsWinning()
     {
         animator.SetBool("IsWinning", true);
         //transform.localScale = targetScale;
