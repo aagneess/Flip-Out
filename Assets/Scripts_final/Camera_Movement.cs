@@ -54,17 +54,17 @@ public class Camera_Movement : MonoBehaviour
     private void Cameracheck()
     {
         checkposition = true;
-        Debug.Log(checkposition);
+      //  Debug.Log(checkposition);
     }
 
     // Detect when the camera enters the stopCamera tag
-    private void OnTriggerEnter2D(Collider2D collider)
+    public void OnTriggerEnter2D(Collider2D collider)
     {
         // Check if the camera collided with the empty GameObject (tagged "StopCamera")
         if (collider.gameObject.CompareTag("stopCamera"))
         {
             canFollow = false; // Stop the camera from following the player
-            Debug.Log(canFollow);
+            Debug.Log("be false:"+ canFollow);
         }
 
     }

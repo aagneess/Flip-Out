@@ -70,13 +70,21 @@ public class Collision : MonoBehaviour
       
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    public void OnCollisionExit2D(Collision2D collision)
     {
+        // Exit early if the camera is not allowed to follow
+        if (!cameraMovementScript.canFollow)
+        {
+            Debug.Log("Camera cannot follow due to stopCamera restriction.");
+            return; // Exit the function if the camera is restricted
+        }
+
         if (collision.gameObject.CompareTag(enemyTag) || collision.gameObject.CompareTag(obstacleTag))
         {
             cameraMovementScript.canFollow = true;//makes camera to follow again from the camera script
-            Debug.Log("ffollow now" + cameraMovementScript);
+            Debug.Log("follow now" + cameraMovementScript);
             animator.SetBool("IsStumbling", false);
+
         }
     }
 
