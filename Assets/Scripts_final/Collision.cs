@@ -73,7 +73,7 @@ public class Collision : MonoBehaviour
     public void OnCollisionExit2D(Collision2D collision)
     {
         // Exit early if the camera is not allowed to follow
-        if (!cameraMovementScript.canFollow)
+        if (!cameraMovementScript.canFollow && collision.gameObject.CompareTag("stopCamera"))
         {
             Debug.Log("Camera cannot follow due to stopCamera restriction.");
             return; // Exit the function if the camera is restricted
