@@ -14,6 +14,8 @@ public class Camera_Movement : MonoBehaviour
     private bool checkposition = false;
     private float delayHideTutorial = 3f;
 
+    public bool stoptime;
+
     //x limit för spelaran vad är positionen på kameran när den början 
     //lägg den på efter camera.x 
     // Start is called before the first frame update
@@ -63,10 +65,20 @@ public class Camera_Movement : MonoBehaviour
         // Check if the camera collided with the empty GameObject (tagged "StopCamera")
         if (collider.gameObject.CompareTag("stopCamera"))
         {
+            stoptime = true;
             canFollow = false; // Stop the camera from following the player
-            Debug.Log("be false:"+ canFollow);
+            Debug.Log("Time to stop:"+ canFollow);
         }
 
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        // Check if the camera collided with the empty GameObject (tagged "StopCamera")
+        if (collision.gameObject.CompareTag("stopCamera"))
+        {
+            stoptime = false;
+            
+        }
     }
 }
  

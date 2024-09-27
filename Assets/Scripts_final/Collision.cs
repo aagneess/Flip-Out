@@ -26,6 +26,8 @@ public class Collision : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private float lastDamageTime;
 
+    public Camera_Movement cameraMovement;
+
     private void Start()
     {
         
@@ -73,7 +75,7 @@ public class Collision : MonoBehaviour
     public void OnCollisionExit2D(Collision2D collision)
     {
         // Exit early if the camera is not allowed to follow
-        if (!cameraMovementScript.canFollow && collision.gameObject.CompareTag("stopCamera"))
+        if ((!cameraMovementScript.canFollow) && cameraMovement.stoptime)
         {
             Debug.Log("Camera cannot follow due to stopCamera restriction.");
             return; // Exit the function if the camera is restricted
