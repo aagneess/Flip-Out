@@ -1949,6 +1949,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 4767738892075544961}
   canFollow: 1
+  stoptime: 0
 --- !u!114 &281414387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22830,7 +22831,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1335441527392827527, guid: 8279cdc808de5b54787decb2e7815a51, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.147
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 1335441527392827527, guid: 8279cdc808de5b54787decb2e7815a51, type: 3}
       propertyPath: m_LocalPosition.z
@@ -22866,7 +22867,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2822539608397242345, guid: 8279cdc808de5b54787decb2e7815a51, type: 3}
       propertyPath: damage
-      value: 1
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2822539608397242345, guid: 8279cdc808de5b54787decb2e7815a51, type: 3}
       propertyPath: flipOutBar
@@ -22889,8 +22890,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2822539608397242345, guid: 8279cdc808de5b54787decb2e7815a51, type: 3}
+      propertyPath: cameraMovement
+      value: 
+      objectReference: {fileID: 281414386}
+    - target: {fileID: 2822539608397242345, guid: 8279cdc808de5b54787decb2e7815a51, type: 3}
       propertyPath: damageInterval
-      value: 0.03
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 9210492655372649834, guid: 8279cdc808de5b54787decb2e7815a51, type: 3}
       propertyPath: maxSpeed
