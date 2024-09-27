@@ -58,7 +58,7 @@ public class Collision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(enemyTag) || collision.gameObject.CompareTag(obstacleTag))
         {
-            IsStumbling();
+            animator.SetBool("IsStumbling", true);
 
             // Stop the camera from following the player
             if (cameraMovementScript != null)
@@ -67,10 +67,7 @@ public class Collision : MonoBehaviour
                 Debug.Log("please work" + cameraMovementScript);
             }
         }
-        else 
-        {
-            animator.SetBool("IsStumbling", false);
-        }
+      
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -79,6 +76,7 @@ public class Collision : MonoBehaviour
         {
             cameraMovementScript.canFollow = true;//makes camera to follow again from the camera script
             Debug.Log("ffollow now" + cameraMovementScript);
+            animator.SetBool("IsStumbling", false);
         }
     }
 
